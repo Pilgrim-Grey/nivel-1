@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 3</title>
+<link rel="stylesheet" href="main.css">
+<style>
+
+header {
+	grid-area: header;
+}
+
+.content {
+	grid-area: content;
+}
+
+footer {
+	grid-area: footer;
+}
+
+body {
+	width: 100%;
+    max-width: 1200px;
+    display: grid;
+	grid-template-areas:
+			"header"
+			"content"
+			"footer";
+	grid-gap: 20px;
+}
+
+.header1 { grid-area: header1; }
+.header2 { grid-area: header2; }
+.header3 { grid-area: header3; }
+.header4 { grid-area: header4; }
+
+header {
+ 	display: grid;
+	grid-template-areas:
+			"header1 header2 header2 header2 header2 header3"
+			"header4 header4 header4 header4 header4 header4";
+    background-color: black;
+	padding: 2rem;
+}
+
+header > div{
+	border: 2rem solid #2D4059;
+	background-color: #EA5455;
+	height: 2rem;
+}
+
+header > div:nth-child(4){
+	border: 2rem solid #F07B3F;
+	background-color: #FED460;
+	height: 2rem;
+	margin-top: 1rem;
+}
+
+.main > div{
+	background-color: rgba(255, 255, 255, 0.8);
+	height: 2rem;
+}
+
+.main {
+	grid-area: contenido;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.content{
+	display: grid;
+	grid-template-areas:
+		"contenido contenido sidebar";
+	grid-gap: 20px;
+    background-color: black;
+	padding: 2rem;
+}
+
+contenido {
+    background-color: black;
+}
+
+.item1 { grid-area: main1; }
+.item2 { grid-area: main2; }
+.item3 { grid-area: main3; }
+.item4 { grid-area: main4; }
+.item5 { grid-area: main5; }
+
+.main{
+	display: grid;
+	grid-template-areas:
+			"main1 main2"
+			"main3 main4"
+			"main5 main5";
+    background-color: #1F6CB0;
+	border: 1rem solid #4E4E6A;
+}
+
+.main > div{
+	border: 1rem solid #4E4E6A;
+	background-color: #1F6CB0;
+	height: 2rem;
+}
+
+.main .item5 { 
+	background-color:#70A3C4;
+}
+
+.sidebar {
+	border: 1rem solid #F73F52;
+    background-color: #F73F52;
+}
+
+.sidebar > div{
+	border: 1rem solid #F73F52;
+    background-color: #FEEA85;
+	height: 2rem;
+	margin-bottom: -1rem;
+}
+
+footer{
+	border: 2rem solid black;
+	background-color: #E6AF2E;
+	height: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+	/* tablets 768px - 991px */
+	.content{
+		display: grid;
+		grid-template-areas:
+			"contenido"
+			"sidebar";
+		grid-gap: 20px;
+		background-color: #FEFF03;
+		padding: 2rem;
+	}
+	
+	.sidebar > div:last-child{
+		margin-bottom: 0rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	/* smartfones */
+	.main{
+		display: grid;
+		grid-template-areas:
+				"main1"
+				"main2"
+				"main3"
+				"main4"
+				"main5";
+		background-color: #1F6CB0;
+		border: 1rem solid #4E4E6A;
+	}
+
+	.sidebar {
+		border: 1rem solid #FD7B54;
+		background-color: #FD7B54;
+	}
+
+	.sidebar > div{
+		border: 1rem solid #FD7B54;
+		background-color: #FDB36B;
+		height: 2rem;
+		margin-bottom: -1rem;
+	}
+	.sidebar > div:last-child{
+		margin-bottom: 0rem;
+	}
+}
+
+
+
+</style>
+</head>
+<body>
+<header>
+	<div class="header1"></div>
+	<div class="header2"></div>
+	<div class="header3"></div>
+	<div class="header4"></div>
+</header>
+<div class="content">
+	<section class="main">
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+		<div class="item4"></div>
+		<div class="item5"></div>
+	</section>
+	<section class="sidebar">
+		<div></div>
+		<div></div>
+	</section>
+</div>
+<footer>
+	<div></div>
+</footer>
+</body>
+</html>
